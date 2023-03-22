@@ -1,1 +1,2 @@
-int _putchar(char c);
+#define main_h
+int _putchar(char);
