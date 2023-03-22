@@ -4,7 +4,7 @@
 
 /**
  * main - Entry point
- *
+ * print_alphabet - printall alphabet in lowercase
  * Return: Always 0 (Success)
  */
 
