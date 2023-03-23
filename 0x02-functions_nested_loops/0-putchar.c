@@ -12,8 +12,8 @@ int _putchar(void)
 	int i;
 
 	for (i = 0; i < 9; i++)
-		putchar(word[i]);
-	putchar('\n');
+		write(word[i]);
+	write('\n');
 
 	return (0);
 }
