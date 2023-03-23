@@ -1,2 +1,2 @@
-#define main.h
+#define main_h
 int _isupper(int c);
