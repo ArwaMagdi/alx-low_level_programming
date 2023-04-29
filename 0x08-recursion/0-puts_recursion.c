@@ -14,7 +14,7 @@ void _puts_recursion(char *s)
 	}
 	else
 	{
-		write(1, '\n', 1);
+		write(1, &'\n', 1);
 	}
 }
 
