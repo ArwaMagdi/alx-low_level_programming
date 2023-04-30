@@ -48,4 +48,4 @@ int helper_palindrome(char *s, int len)
 	}
 	else
 		return (0);
-
+}
