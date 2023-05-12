@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * read_textfile - A function that reads a text file and prints
  * to the POSIX STDOUT
@@ -9,36 +8,35 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-    int fo , fr , fw;
-    char *temp;
+	int fdo, fdr, fdw;
+	char *temp;
 
-    if ( filename == NULL)
-        return (0);
-    temp = malloc(sizeof(char) * letters);
+	if (filename == NULL)
+		return (0);
 
-    if (temp == NULL)
-        return (0);
+	temp = malloc(sizeof(char) * letters);
+	if (temp == NULL)
+		return (0);
 
-   fo = open(filename, O_RDONLY);
-	if (fo < 0)
+	fdo = open(filename, O_RDONLY);
+	if (fdo < 0)
 	{
 		free(temp);
 		return (0);
 	}
 
-	fr = read(fo, temp, letters);
-	if (fr < 0)
+	fdr = read(fdo, temp, letters);
+	if (fdr < 0)
 	{
 		free(temp);
 		return (0);
 	}
 
-	fw = write(STDOUT_FILENO, temp, fr);
+	fdw = write(STDOUT_FILENO, temp, fdr);
 	free(temp);
-	close(fo);
+	close(fdo);
 
-	if (fw < 0)
+	if (fdw < 0)
 		return (0);
-	return ((ssize_t)fw); 
-
+	return ((ssize_t)fdw);
 }
